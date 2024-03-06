@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca&family=Outfit:wght@100..900&family=Poppins:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend+Deca&family=Outfit:wght@100..900&family=Poppins:wght@400;700&display=swap');
+
+/* Custom Properties */
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    --font-size-15: 15px;
+    --ff-1: "Lexend Deca", sans-serif;
+    --ff-2: "Big Shoulders Display", sans-serif;;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Utility Classes */
+.card.bg-bright-orange {
+    background: var(--bright-orange);
+}
+
+.card.bg-dark-cyan {
+    background: var(--dark-cyan);
+}
+
+.card.bg-very-dark-cyan {
+    background: var(--very-dark-cyan);
+}
+
+.paragraph-text {
+    color: var(--transparent-white-p);
+}
+
+.heading-text{
+    font-family: var(--ff-2);
+    font-size: 30px;
+    font-weight: var(--fw-700);
+    margin-bottom: 1em;
+}
+
+.btn {
+    background: white;
+    border: 1px solid transparent;
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin-top: 8em;
+    transition: 0.5s ease;
+}
+
+
+.btn.btn1 {
+    color: var(--bright-orange);
+}
+.btn.btn2 {
+    color: var(--dark-cyan);
+}
+.btn.btn3 {
+    color: var(--very-dark-cyan);
+}
+
+
+/* General styling */
+
+body {
+    color: white;
+    font-size: var(--font-size-15);
+    line-height: 1.4;
+    height: 100dvh;
+}
+
+
+.card {
+    height: 450px;
+    padding: 40px 35px;
+    width: 250px;
+}
+
+.card:nth-of-type(1) {
+    border-radius: 10px 0 0 10px;
+}
+
+.card:nth-of-type(3) {
+    border-radius: 0 10px 10px 0;
+}
+
+.card img {
+    height: 30px;
+    margin-bottom: 1.5em;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.btn.btn1:hover,
+.btn.btn2:hover,
+.btn.btn3:hover {
+    color: white;
+}
+
+
+.attribution {
+    color: black;
+    font-size: var(--font-size-15);
+    position: absolute;
+    bottom: 1em;
+    right: 41%;
+}
+
+
+/* Media Queries */
+@media (max-width: 50em) {
+    body {
+        height: 165dvh;
+    }
+    .cards .container {
+        display: block;
+        text-align: left;
+    }
+    .card {
+        width: 320px;
+        height: 370px;
+    }
+
+    .btn {
+        margin-top: 2em;
+    }
+
+    .card:nth-of-type(1) {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card:nth-of-type(3) {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .attribution{
+        display: none;
+    }
+
+}
